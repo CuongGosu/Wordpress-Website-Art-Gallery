@@ -1,0 +1,607 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@media print, (min-width: 768px) {
+  html {
+    font-size: 62.5%;
+  }
+}
+@media print, (min-width: 768px) and (max-width: 1024px) {
+  html {
+    font-size: 1.3333333333vw;
+  }
+}
+@media only screen and (max-width: 767.98px) {
+  html {
+    min-height: 100vh;
+    font-size: 1.3333333333vw;
+  }
+}
+@media screen and (max-width: 570px) {
+  html {
+    font-size: 1.5384615385vw;
+  }
+}
+
+body {
+  font-family: 'Alegreya Sans', sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  font-size: 1.6rem;
+  color: #111;
+  line-height: 1.5;
+}
+
+img {
+  width: 100%;
+}
+
+.object-fit {
+  object-fit: cover;
+}
+
+.trans {
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  opacity: 1;
+}
+.trans:hover {
+  opacity: 0.8;
+}
+
+@media only screen and (max-width: 767.98px) {
+  .container {
+    min-width: 320px;
+  }
+}
+
+@media print, (min-width: 768px) {
+  .wrapper {
+    width: calc(100% - 60px);
+    max-width: 1900px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+@media only screen and (max-width: 767.98px) {
+  .wrapper {
+    padding-right: 2.5rem;
+    padding-left: 2.5rem;
+  }
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.list-style {
+  list-style: none;
+}
+
+.no-scroll {
+  overflow: hidden; /* Vô hiệu hóa cuộn */
+}
+
+.object-fit img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+.info-primary {
+  background-color: rgba(255, 255, 255, 0);
+  z-index: 10;
+  text-align: center;
+}
+
+.title-primary {
+  color: #bea680;
+  font-style: italic;
+  font-family: 'EB Garamond', sans-serif;
+  font-size: 3rem;
+  display: inline-block;
+}
+
+.heading-primary {
+  font-size: 12rem;
+  font-weight: 400;
+  display: block;
+  color: #fff;
+  margin-bottom: 3rem;
+}
+@media print, (min-width: 768px) and (max-width: 1024px) {
+  .heading-primary {
+    font-size: 10rem;
+  }
+}
+@media only screen and (max-width: 767.98px) {
+  .heading-primary {
+    font-size: 9rem;
+  }
+}
+
+.button-primary {
+  position: relative;
+  display: flex;
+  vertical-align: middle;
+  width: max-content;
+  margin: 0 auto;
+  font-family: 'EB Garamond', sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  font-weight: 600;
+  letter-spacing: 0.07em;
+  outline: 0;
+  padding: 1rem 3rem;
+  cursor: pointer;
+  color: #fff;
+  background-color: transparent;
+  border: 1px solid #c9ab81;
+}
+@media print, (min-width: 768px) and (max-width: 1024px) {
+  .button-primary {
+    font-size: 2.3rem;
+  }
+}
+@media only screen and (max-width: 767.98px) {
+  .button-primary {
+    font-size: 2.5rem;
+  }
+}
+.button-primary:hover {
+  opacity: 0.8;
+}
+.button-primary.red {
+  color: #f15a2f;
+  border: 1px solid #826448;
+}
+
+.heading-secondary {
+  font-family: 'EB Garamond', sans-serif;
+  position: relative;
+  font-size: 6rem;
+  font-weight: 500;
+  display: block;
+  color: #111;
+  margin: 0 auto 3rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 2rem;
+}
+@media print, (min-width: 768px) and (max-width: 1024px) {
+  .heading-secondary {
+    font-size: 5.5rem;
+  }
+}
+@media only screen and (max-width: 767.98px) {
+  .heading-secondary {
+    font-size: 4rem;
+  }
+}
+.heading-secondary .heading-text {
+  max-width: 75%;
+  padding: 0 4rem;
+}
+@media print, (min-width: 768px) {
+  .heading-secondary .heading-text {
+    padding: 0 3rem;
+  }
+}
+@media only screen and (max-width: 767.98px) {
+  .heading-secondary .heading-text {
+    padding: 0 2rem;
+  }
+}
+.heading-secondary .line {
+  width: 25%;
+  height: 1px;
+  background-color: #49413a;
+}
+@media print, (min-width: 768px) and (max-width: 1024px) {
+  .heading-secondary .line {
+    flex: 1;
+  }
+}
+@media only screen and (max-width: 767.98px) {
+  .heading-secondary .line {
+    width: 17%;
+  }
+}
+.heading-secondary .line-left {
+  left: 0;
+}
+.heading-secondary .line-right {
+  right: 0;
+}
+
+.button-secondary {
+  font-size: 1.8rem;
+  position: relative;
+  font-family: 'EB Garamond', sans-serif;
+  transition: all 0.3s ease-in-out;
+  color: #bea680;
+  width: max-content;
+}
+.button-secondary:hover {
+  color: #f15a2f;
+}
+.button-secondary:hover::before,
+.button-secondary:hover::after {
+  width: 50%;
+}
+.button-secondary::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 120%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 1px;
+  background-color: #f15a2f;
+  transition: all 0.3s ease-in-out;
+}
+.button-secondary::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 120%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 1px;
+  background-color: #f15a2f;
+  transition: all 0.3s ease-in-out;
+}
+
+.button-tertiary {
+  color: #bea680;
+  position: relative;
+}
+.button-tertiary:hover {
+  color: #f15a2f;
+}
+.button-tertiary:hover::before {
+  opacity: 1;
+  visibility: visible;
+  transform: scaleX(2.5) translateX(0);
+}
+.button-tertiary::before {
+  content: '→';
+  position: absolute;
+  left: -45%;
+  opacity: 0;
+  visibility: hidden;
+  transform: scaleX(1) translateX(-15px);
+  transition: all 0.3s ease-in-out;
+}
+
+@media print, (min-width: 768px) and (max-width: 1024px) {
+  .banner-common {
+    height: 30rem;
+  }
+}
+@media only screen and (max-width: 767.98px) {
+  .banner-common {
+    height: 24rem;
+    padding: 5rem 0;
+  }
+}
+
+.heading-territory {
+  font-family: 'EB Garamond', sans-serif;
+  position: relative;
+  text-align: center;
+  font-size: 6rem;
+  font-weight: 500;
+  display: block;
+  color: #fff;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 2rem;
+}
+@media print, (min-width: 768px) and (max-width: 1024px) {
+  .heading-territory {
+    font-size: 5.5rem;
+  }
+}
+@media only screen and (max-width: 767.98px) {
+  .heading-territory {
+    font-size: 5.5rem;
+  }
+}
+
+.section-detail-artist .artist-inner {
+  font-size: 1.8rem;
+  padding-bottom: 2rem;
+  padding-top: 5rem;
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin: 0 auto;
+}
+h4 {
+  font-size: 2.2rem;
+}
+p {
+  line-height: 1.15;
+}
+@media print, (min-width: 768px) and (max-width: 1024px) {
+  .section-detail-artist .artist-inner {
+    width: 100%;
+    flex-direction: column;
+  }
+}
+@media only screen and (max-width: 767.98px) {
+  .section-detail-artist .artist-inner {
+    width: 100%;
+    flex-direction: column;
+    font-size: 3rem;
+    line-height: 1.6;
+  }
+}
+.section-detail-artist .artist-left {
+  width: 25%;
+  padding: 2rem;
+  background-color: #f8f8f8;
+}
+@media print, (min-width: 768px) and (max-width: 1024px) {
+  .section-detail-artist .artist-left {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+}
+@media only screen and (max-width: 767.98px) {
+  .section-detail-artist .artist-left {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+}
+.section-detail-artist .artist-left .artist-name {
+  font-family: 'EB Garamond', sans-serif;
+  font-size: 2.8rem;
+}
+@media screen and (max-width: 1300px) {
+  .section-detail-artist .artist-left .artist-name {
+    font-size: 2.4rem;
+  }
+}
+@media print, (min-width: 768px) and (max-width: 1024px) {
+  .section-detail-artist .artist-left .artist-name {
+    font-size: 3rem;
+  }
+}
+@media only screen and (max-width: 767.98px) {
+  .section-detail-artist .artist-left .artist-name {
+    font-size: 4.5rem;
+  }
+}
+.section-detail-artist .artist-left .artist-info {
+  gap: 1rem;
+  font-size: 1.8rem;
+}
+@media print, (min-width: 768px) and (max-width: 1024px) {
+  .section-detail-artist .artist-left .artist-info {
+    font-size: 2.5rem;
+  }
+}
+@media only screen and (max-width: 767.98px) {
+  .section-detail-artist .artist-left .artist-info {
+    font-size: 3rem;
+  }
+}
+.section-detail-artist .intro-description {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: all 0.3s ease-in-out;
+}
+.section-detail-artist .intro-description.expanded {
+  -webkit-line-clamp: unset;
+}
+.section-detail-artist .toggle-btn {
+  border: 0;
+  outline: 0;
+  color: #826448;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 1.5rem;
+  transition: all 0.3s ease-in-out;
+}
+.section-detail-artist .toggle-btn:hover {
+  color: #49413a;
+}
+
+@media print, (min-width: 768px) and (max-width: 1024px) {
+  .section-detail-artist .toggle-btn {
+    font-size: 1.4rem;
+    margin-top: 0.5rem;
+  }
+}
+@media only screen and (max-width: 767.98px) {
+  h4 {
+    font-size: 3.3rem;
+  }
+  .section-detail-artist .toggle-btn {
+    font-size: 2.5rem;
+    margin-top: 1rem;
+  }
+}
+.section-detail-artist div {
+  margin-bottom: 1.2rem;
+}
+.section-detail-artist h3 {
+  margin-bottom: 1rem;
+  font-size: 3rem;
+}
+.section-detail-artist .artist-learn .toggle-btn {
+  display: none;
+  margin-top: 0.5rem;
+}
+.section-detail-artist .list-learn {
+  max-height: 6em;
+  overflow: hidden;
+  transition: all 0.5s ease;
+}
+.section-detail-artist .list-learn.expanded {
+  max-height: none;
+}
+.section-detail-artist .list-learn li {
+  display: flex;
+  gap: 1rem;
+}
+@media only screen and (max-width: 767.98px) {
+  .section-detail-artist .list-learn {
+    max-height: 8.5em;
+  }
+  .section-detail-artist .list-learn p {
+    padding-top: 0.4rem;
+  }
+}
+.section-detail-artist .artist-exhibition .toggle-btn {
+  display: none;
+  margin-top: 0.5rem;
+}
+.section-detail-artist .list-exhibition {
+  max-height: 7.3em;
+  overflow: hidden;
+  transition: all 0.5s ease;
+}
+@media screen and (max-width: 1300px) {
+  .section-detail-artist .list-exhibition {
+    max-height: 7.8em;
+  }
+}
+@media only screen and (max-width: 767.98px) {
+  .section-detail-artist .list-exhibition {
+    max-height: 8.5em;
+  }
+}
+.section-detail-artist .list-exhibition.expanded {
+  max-height: none;
+}
+.section-detail-artist .list-exhibition li {
+  display: flex;
+  gap: 1rem;
+}
+@media only screen and (max-width: 767.98px) {
+  .section-detail-artist .list-exhibition p {
+    padding-top: 0.4rem;
+  }
+}
+.section-detail-artist time {
+  font-weight: 500;
+  font-size: 1.8rem;
+  font-family: 'EB Garamond', sans-serif;
+}
+@media only screen and (max-width: 767.98px) {
+  .section-detail-artist time {
+    font-size: 3rem;
+  }
+}
+.section-detail-artist .artist-right {
+  width: 70%;
+  padding-top: 1rem;
+}
+@media print, (min-width: 768px) and (max-width: 1024px) {
+  .section-detail-artist .artist-right {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 767.98px) {
+  .section-detail-artist .artist-right {
+    width: 100%;
+  }
+}
+.section-detail-artist .title-product {
+  font-size: 2.8rem;
+  margin-bottom: 2rem;
+}
+@media print, (min-width: 768px) and (max-width: 1024px) {
+  .section-detail-artist .title-product {
+    font-size: 3.5rem;
+  }
+}
+@media only screen and (max-width: 767.98px) {
+  .section-detail-artist .title-product {
+    font-size: 4.5rem;
+  }
+}
+.section-detail-artist .list-product {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -1.5rem;
+}
+.section-detail-artist .item-product {
+  width: 33.3333333333%;
+  padding: 1.5rem;
+}
+.section-detail-artist .item-product:first-child {
+  width: 100%;
+}
+.section-detail-artist .item-product:first-child a {
+  display: block;
+  height: 100%;
+}
+.section-detail-artist .item-product:first-child figure {
+  position: relative;
+  aspect-ratio: 3/2;
+}
+.section-detail-artist .item-product:first-child img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+@media print, (min-width: 768px) and (max-width: 1024px) {
+  .section-detail-artist .item-product {
+    width: 50%;
+  }
+}
+@media only screen and (max-width: 767.98px) {
+  .section-detail-artist .item-product {
+    width: 50%;
+  }
+}
+@media only screen and (max-width: 767.98px) {
+  .section-detail-artist .artist-exhibition .toggle-btn {
+    font-size: 2.5rem;
+    margin-top: 1rem;
+  }
+}

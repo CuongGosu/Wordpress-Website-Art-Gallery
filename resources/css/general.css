@@ -1,0 +1,183 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Alegreya Sans', sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  font-size: 1.6rem;
+  color: #111;
+  line-height: 1.5;
+}
+
+img {
+  width: 100%;
+}
+
+.object-fit {
+  object-fit: cover;
+}
+
+.trans {
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  opacity: 1;
+}
+.trans:hover {
+  opacity: 0.8;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.list-style {
+  list-style: none;
+}
+
+.no-scroll {
+  overflow: hidden; /* Vô hiệu hóa cuộn */
+}
+
+.object-fit img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+.info-primary {
+  background-color: rgba(255, 255, 255, 0);
+  z-index: 10;
+  text-align: center;
+}
+
+.title-primary {
+  color: #bea680;
+  font-style: italic;
+  font-family: 'EB Garamond', sans-serif;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  display: inline-block;
+}
+
+.button-primary {
+  position: relative;
+  display: flex;
+  vertical-align: middle;
+  width: max-content;
+  margin: 0 auto;
+  font-family: 'EB Garamond', sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  font-weight: 600;
+  letter-spacing: 0.07em;
+  outline: 0;
+  padding: 1rem 3rem;
+  cursor: pointer;
+  color: #fff;
+  background-color: transparent;
+  border: 1px solid #c9ab81;
+}
+.button-primary:hover {
+  opacity: 0.8;
+}
+.button-primary.red {
+  color: #f15a2f;
+  border: 1px solid #826448;
+}
+
+.heading-secondary {
+  font-family: 'EB Garamond', sans-serif;
+  position: relative;
+  font-size: 6rem;
+  font-weight: 500;
+  display: block;
+  color: #111;
+  margin: 0 auto 3rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 2rem;
+}
+.heading-secondary .heading-text {
+  max-width: 75%;
+  padding: 0 4rem;
+}
+.heading-secondary .line {
+  width: 25%;
+  height: 1px;
+  background-color: #49413a;
+}
+.heading-secondary .line-left {
+  left: 0;
+}
+.heading-secondary .line-right {
+  right: 0;
+}
+
+.button-secondary {
+  font-size: 1.8rem;
+  position: relative;
+  font-family: 'EB Garamond', sans-serif;
+  transition: all 0.3s ease-in-out;
+  color: #bea680;
+  width: max-content;
+  z-index: 11;
+}
+.button-secondary:hover {
+  color: #f15a2f;
+}
+.button-secondary:hover::before,
+.button-secondary:hover::after {
+  width: 50%;
+}
+.button-secondary::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 120%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 1px;
+  background-color: #f15a2f;
+  transition: all 0.3s ease-in-out;
+}
+.button-secondary::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 120%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 1px;
+  background-color: #f15a2f;
+  transition: all 0.3s ease-in-out;
+}
